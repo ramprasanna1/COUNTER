@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <label id="counter">0</label><br>
+    <button id="decrease" >DECREASE </button>
+    <button id="reset">RESET</button>
+    <button id="increase">INCREASE</button>
+</div>
+</body>
+<script>
+    const counter = document.getElementById('counter');
+    let count = 0;
+    document.getElementById("decrease").onclick=function(){
+        count-=1;
+        counter.style.color='red'
+        counter.innerHTML = count
+    }
+    document.getElementById("reset").onclick=function(){
+        count=0;
+        counter.style.color='black'
+        counter.innerHTML = count    
+    }
+    document.getElementById("increase").onclick=function(){
+        count+=1;
+        counter.style.color='green'
+        counter.innerHTML = count    
+    }
+    
+</script>
+</html>
